@@ -1,14 +1,17 @@
-import streamlit as st
 import mysql.connector
-
-def conectar_bd():
-    conn = mysql.connector.connect(
-        host='localhost',
-        user='tu_usuario',
-        password='tu_contraseña',
-        database='tu_base_de_datos'
-    )
-    return conn
+from mysql.connector import Error
+import streamlit as st
+def obtener_conexion():
+        # Intentar establecer la conexión
+        connect = mysql.connector.connect(
+            host="autorack.proxy.rlwy.net",  # Usa la IP si el DNS falla
+            user="root",
+            password="sijpXgRGVhlXlEUXQuLQNMQOrdadHmGQ",
+            database="railway",
+            port=54237,
+            connection_timeout=300
+        )
+        return connect
 
 # Funciones CRUD
 def crear_registro(nombre, edad):
