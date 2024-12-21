@@ -46,7 +46,7 @@ def eliminar_registro(id):
 
 # Interfaz de Streamlit
 def main():
-    st.title("CRUD con Streamlit de NADYA ARANIBAR :female-technologist:")
+    st.title("APP LISTA DE PERSONAS by NADYA ARANIBAR :female-technologist:")
     
     menu = ["Crear", "Leer", "Actualizar", "Eliminar"]
     choice = st.sidebar.selectbox("Menu", menu)
